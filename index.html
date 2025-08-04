@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Wyspe Promotional Website
+        Created for you by Gemini
+        Instructions:
+        1. Save this entire file as "index.html".
+        2. Replace the placeholder links and image/gif paths with your own.
+        3. Upload to a GitHub repository and enable GitHub Pages.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Wyspe - Your Voice is Now Your Keyboard</title>
+    <meta name="description" content="Wyspe is a blazingly fast and private dictation tool that works in any app on your Mac. Stop typing, start talking.">
+
+    <!-- Google Fonts for a nice, clean look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- General Styling & Variables --- */
+        :root {
+            --primary-color: #007AFF; /* Apple Blue */
+            --dark-color: #1c1c1e;
+            --light-gray-color: #f2f2f7;
+            --text-color: #333;
+            --text-secondary-color: #6a6a6f;
+            --container-width: 960px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        h1, h2, h3 {
+            color: var(--dark-color);
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 3rem;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2.25rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        /* --- Header / Hero Section --- */
+        .hero {
+            text-align: center;
+            padding: 80px 0 40px 0;
+        }
+
+        .hero .app-icon {
+            width: 90px;
+            height: 90px;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary-color);
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+        
+        .hero .app-store-badge {
+            display: inline-block;
+            margin-bottom: 3rem;
+            transition: transform 0.2s ease-out;
+        }
+        .hero .app-store-badge:hover {
+            transform: scale(1.05);
+        }
+
+        .hero-visual {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            margin-bottom: -120px; /* Pulls the next section up */
+            position: relative;
+            z-index: 10;
+        }
+
+        /* --- Features Section --- */
+        .features {
+            background-color: var(--light-gray-color);
+            padding-top: 200px; /* Make space for the hero visual overlap */
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            text-align: left;
+        }
+        .feature-item {
+            background-color: #fff;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .feature-item svg {
+            width: 32px;
+            height: 32px;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .feature-item h3 {
+            margin-bottom: 0.5rem;
+        }
+        .feature-item p {
+            color: var(--text-secondary-color);
+            margin: 0;
+        }
+
+        /* --- How It Works Section --- */
+        .how-it-works .steps {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .how-it-works .step {
+            flex-basis: 30%;
+        }
+        .how-it-works .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--light-gray-color);
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        /* --- Privacy Section --- */
+        .privacy {
+             background-color: var(--light-gray-color);
+        }
+        .privacy-content {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .privacy-content svg {
+            width: 60px;
+            height: 60px;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-secondary-color);
+        }
+        footer a {
+            color: var(--text-secondary-color);
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.75rem; }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .how-it-works .steps {
+                flex-direction: column;
+                gap: 40px;
+            }
+            .privacy-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <!-- IMPORTANT: Replace with the path to your app's icon -->
+            <img src="assets/icon.png" alt="Wyspe App Icon" class="app-icon">
+            
+            <h1>Your Voice is Now Your Keyboard.</h1>
+            <p>Wyspe is a blazingly fast and private dictation tool that works in any app on your Mac. Just double-tap Command and start talking.</p>
+
+            <a href="https://apps.apple.com/us/app/wyspe/id1234567890" class="app-store-badge" target="_blank">
+                <!-- Mac App Store Badge SVG -->
+                <svg width="160" height="53" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="40" rx="8" fill="black"/><path d="M8.31429 20.3333C8.31429 21.0381 8.42857 21.7143 8.62857 22.3333H19.5429C19.5143 22.0381 19.5 21.7333 19.5 21.4286C19.5 15.0476 14.4571 10 8 10C5.94286 10 4.05714 10.5714 2.51429 11.5714C3.82857 9.04762 6.48571 7.33333 9.6 7.33333C10.1143 7.33333 10.6286 7.39048 11.1143 7.51429C10.2 6.09524 8.91429 5 7.42857 5C5.02857 5 3.14286 6.71429 3.14286 9.09524C3.14286 9.39048 3.17143 9.68571 3.22857 9.98095C2.11429 11.2381 1.25714 12.7619 0.8 14.4286C0.285714 16.2381 0 18.1905 0 20.2381C0 26.619 4.11429 32.2381 9.42857 34.2857C10.0571 34.5238 10.7143 34.6667 11.4 34.7619V28.1429C11.4 27.619 11.8286 27.1905 12.3429 27.1905H15.0286C15.5429 27.1905 15.9714 27.619 15.9714 28.1429V34.7619C18.6857 33.7143 20.9143 31.8095 22.4 29.4286C20.9143 29.0476 19.5429 28.381 18.3714 27.5238C17.6 26.9524 17.3714 25.9524 17.8286 25.1429C18.2857 24.3333 19.2857 24.0476 20.0571 24.5238C22.6857 26.0476 24.3143 28.381 24.7714 31.1429C25.0571 27.4286 22.4571 24.1905 19.0857 22.9524C19.7143 22.6667 20.2857 22.381 20.8286 22.0476L20.9143 22C21.4286 21.6667 21.7143 21.0381 21.5143 20.4762C21.3143 19.9143 20.7429 19.5238 20.1429 19.619L19.8286 19.6667C19.8286 19.6667 19.8 19.6667 19.7714 19.6667C19.2286 19.7619 18.6857 19.9048 18.1714 20.1429C14.7429 18.619 11.4 15.4286 11.4 11.4286C11.4 11.0238 11.4286 10.619 11.4857 10.2381C13.5429 10.5238 15.3429 11.4762 16.6286 12.8571C17.6857 13.9524 18.4 15.2857 18.7143 16.7143C18.8286 17.2381 19.3429 17.619 19.8857 17.619H19.9143H19.9429C20.6286 17.619 21.2 17.1429 21.3429 16.4762C21.7714 14.3333 21.2286 12.1429 19.9429 10.4286C18.4286 8.42857 16.1429 7.04762 13.5429 6.57143C15.6571 5.61905 18.0571 5 20.6571 5C26.1714 5 30.6571 9.48571 30.6571 15C30.6571 15.3048 30.6286 15.6095 30.6 15.9143H22.4C21.8571 15.9143 21.4286 16.3429 21.4286 16.8857V23.0952C21.4286 23.6381 21.8571 24.0667 22.4 24.0667H30.6C30.5143 24.8095 30.3429 25.5238 30.1429 26.1905H24.7429C23.6 26.1905 22.6571 27.0952 22.6571 28.1905C22.6571 29.2857 23.6 30.1905 24.7429 30.1905H30.1429C29.6571 31.8571 28.7714 33.3333 27.6286 34.5238C29.4571 32.4286 30.6571 29.619 30.6571 26.5238C30.6571 26.4762 30.6571 26.4286 30.6571 26.381C33.1429 27.5238 35 30.0476 35 32.9524C35 36.7143 31.9714 39.7143 28.1714 39.7143C27.1143 39.7143 26.1143 39.5238 25.2 39.1429C27.6571 37.8095 29.3143 35.1905 29.3143 32.1429C29.3143 29.8571 27.9429 27.8571 25.9714 26.8095V26.8095C25.4286 26.5238 24.7429 26.6667 24.3429 27.1429C23.9429 27.619 24.0286 28.3333 24.5429 28.7143C25.8571 29.6667 26.6571 31.2857 26.6571 33.0476C26.6571 33.1905 26.6571 33.3333 26.6286 33.4762C25.0571 32.0952 22.9714 31.1429 20.6571 30.8571L20.6571 30.8571V28.1905C20.6571 26.5238 19.3143 25.2381 17.6571 25.2381H14.2286C14.0571 25.2381 13.9143 25.2381 13.7714 25.2381L13.7143 25.2381C13.2 25.1905 12.7143 25.0476 12.2857 24.7619C11.6286 24.3333 11.4 23.5238 11.7714 22.8571C12.1429 22.1905 12.9143 21.9524 13.6 22.3333C13.6286 22.3333 13.6571 22.3333 13.6857 22.381C14.6 22.8095 15.6286 23.0476 16.6857 23.0476H18.7714C19.3429 23.0476 19.8286 22.619 19.8286 22.0476V18.9048C19.8286 18.3333 19.3429 17.9048 18.7714 17.9048H16.6857C15.0286 17.9048 13.5143 17.2381 12.4286 16.1429C10.5143 14.2381 8.31429 13.1429 5.82857 12.9048C6.02857 14.1905 6.6 15.381 7.42857 16.381C8.31429 17.4286 9.4 18.2381 10.6286 18.7619C11.1429 19 11.4286 19.5714 11.2286 20.0952C11.0286 20.619 10.4571 20.9524 9.91429 20.8095C9.85714 20.8095 9.8 20.7619 9.74286 20.7619C9.05714 20.5714 8.42857 20.3333 7.85714 20.0476L7.8 20.0476C7.8 20.0476 7.8 20.0476 7.8 20.0476L7.77143 20.0476C7.14286 19.6667 6.42857 19.9524 6.14286 20.5714C5.85714 21.1905 6.08571 21.9048 6.71429 22.1905C7.31429 22.4762 7.94286 22.619 8.6 22.6667H8.62857C8.62857 22.6667 8.62857 22.6667 8.65714 22.6667H8.68571L8.71429 22.6667H8.74286C8.8 22.6667 8.82857 22.6667 8.85714 22.6667C9.51429 22.619 10.1429 22.381 10.6857 21.9524L10.7143 21.9524C11.2 21.5714 11.8286 21.7143 12.1714 22.1905C12.5143 22.6667 12.3714 23.3333 11.8857 23.6667C10.8286 24.4286 9.6 24.9524 8.28571 25.1905C8.25714 25.1905 8.25714 25.1905 8.22857 25.1905H8.14286C6.77143 25.1905 5.51429 24.8095 4.42857 24.1429C5.31429 22.3333 7.02857 20.8571 8.31429 20.3333Z" fill="white"/><path d="M47.5335 15.5C47.5335 12.8182 49.6956 10.6667 52.2616 10.6667C54.8276 10.6667 56.9898 12.8182 56.9898 15.5C56.9898 18.1818 54.8276 20.3333 52.2616 20.3333C49.6956 20.3333 47.5335 18.1818 47.5335 15.5ZM49.3975 15.5C49.3975 16.9773 50.6756 18.2273 52.2616 18.2273C53.8476 18.2273 55.1258 16.9773 55.1258 15.5C55.1258 14.0227 53.8476 12.7727 52.2616 12.7727C50.6756 12.7727 49.3975 14.0227 49.3975 15.5Z" fill="white"/><path d="M57.6521 29.5V11H59.5161V29.5H57.6521Z" fill="white"/><path d="M60.8523 29.5V11H62.7163V29.5H60.8523Z" fill="white"/><path d="M66.3075 29.7C63.2647 29.7 61.218 27.5682 61.218 24.2273C61.218 20.9318 63.2389 18.8182 66.2121 18.8182C67.7464 18.8182 69.0504 19.3409 69.8373 20.2045L68.618 21.4659C68.0413 20.8636 67.2286 20.5455 66.238 20.5455C64.3218 20.5455 63.0958 21.9091 63.0958 24.25C63.0958 26.5909 64.3218 27.9773 66.238 27.9773C67.2286 27.9773 68.0413 27.6591 68.618 27.0568L69.8373 28.3182C69.0504 29.1818 67.7464 29.7 66.3075 29.7Z" fill="white"/><path d="M78.07 29.7C76.4533 29.7 75.3153 29.0455 74.6534 27.9545L76.3359 27.1136C76.7118 27.7614 77.2586 28.0682 77.9464 28.0682C78.7333 28.0682 79.2282 27.6818 79.2282 27.0455C79.2282 26.5 78.8523 26.1591 78.1126 25.9545L77.0547 25.6818C75.6477 25.2955 74.8868 24.4773 74.8868 23.2045C74.8868 21.6136 76.1649 20.4318 78.0181 20.4318C79.3739 20.4318 80.4578 20.9545 81.1456 21.9091L79.4921 22.75C79.1162 22.1818 78.6472 21.9091 78.0442 21.9091C77.3045 21.9091 76.7677 22.3182 76.7677 22.8636C76.7677 23.4545 77.1436 23.7273 77.9464 23.9545L78.9244 24.2273C80.4588 24.6364 81.2197 25.5 81.2197 26.8636C81.2197 28.5909 79.8638 29.7 78.07 29.7Z" fill="white"/><path d="M91.8315 29.5H89.9675L86.5369 22.8636H86.4851V29.5H84.6211V20.7045H86.825L90.0733 27.2727H90.1251V20.7045H91.8315V29.5Z" fill="white"/><path d="M96.4024 25.2045H101.446V26.8864H96.4024V29.5H94.5384V11H96.4024V25.2045Z" fill="white"/><path d="M110.033 29.7C108.416 29.7 107.278 29.0455 106.616 27.9545L108.299 27.1136C108.675 27.7614 109.221 28.0682 109.909 28.0682C110.696 28.0682 111.191 27.6818 111.191 27.0455C111.191 26.5 110.815 26.1591 110.075 25.9545L109.017 25.6818C107.61 25.2955 106.849 24.4773 106.849 23.2045C106.849 21.6136 108.127 20.4318 109.981 20.4318C111.337 20.4318 112.421 20.9545 113.109 21.9091L111.455 22.75C111.079 22.1818 110.61 21.9091 110.007 21.9091C109.267 21.9091 108.73 22.3182 108.73 22.8636C108.73 23.4545 109.106 23.7273 109.909 23.9545L110.887 24.2273C112.421 24.6364 113.182 25.5 113.182 26.8636C113.182 28.5909 111.826 29.7 110.033 29.7Z" fill="white"/></svg>
+            </a>
+
+            <!-- IMPORTANT: Replace with a path to your app's screenshot or GIF -->
+            <img src="assets/wyspe-demo.gif" alt="Wyspe App in action" class="hero-visual">
+        </div>
+    </header>
+
+    <main>
+        <section class="features">
+            <div class="container">
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <!-- Feature Icon 1: Globe -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 2.25c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5 7.5-3.358 7.5-7.5S16.142 2.25 12 2.25zM12 21.75c-4.142 0-7.5-3.358-7.5-7.5s3.358-7.5 7.5-7.5 7.5 3.358 7.5-7.5S16.142 21.75 12 21.75zM12 21.75v-1.5m0-16.5v1.5m-7.5 7.5h1.5m13.5 0h-1.5m-12-5.25l1.06 1.06m10.88 10.88l-1.06-1.06M4.75 4.75l1.06 1.06m10.88 10.88l-1.06-1.06" /></svg>
+                        <h3>Work Faster, Not Harder</h3>
+                        <p>Tired of typing? Dictate notes, emails, and messages in any app. Wyspe integrates seamlessly into your workflow to save you time and effort.</p>
+                    </div>
+                    <div class="feature-item">
+                        <!-- Feature Icon 2: Shield -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.286zm0 13.036h.008v.008h-.008v-.008z" /></svg>
+                        <h3>Keep Your Conversations Private</h3>
+                        <p>Your voice is your own. All transcription is processed securely on your device. Your data is never sent to the cloud, ensuring complete privacy.</p>
+                    </div>
+                    <div class="feature-item">
+                        <!-- Feature Icon 3: Zap -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
+                        <h3>Stay in Your Flow</h3>
+                        <p>With a simple global hotkey (⌘+⌘), Wyspe is always ready when you need it and invisible when you don't. No need to switch windows or lose focus.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <div class="container">
+                <h2>Simple to Use</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Activate</h3>
+                        <p>Press the <strong>Command (⌘)</strong> key twice, anywhere on your Mac.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Speak</h3>
+                        <p>Start talking. Your words will appear instantly in the active application.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Done</h3>
+                        <p>Press <strong>Escape</strong> or just stop talking. It's that easy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="privacy">
+            <div class="container">
+                <div class="privacy-content">
+                     <!-- Privacy Icon: Lock -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
+                    <div>
+                        <h3>Privacy is Not an Afterthought. It's the Default.</h3>
+                        <p>Wyspe uses on-device machine learning to transcribe your speech. This means your voice recordings and transcriptions are never uploaded to any server, ensuring your sensitive information stays with you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Evans Hauser. All rights reserved.</p>
+            <p>
+                <a href="mailto:support@wyspe.app">Support</a>
+                 • 
+                <a href="privacy-policy.html">Privacy Policy</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
